@@ -82,6 +82,7 @@ Suggests:
     rcmdcheck,
     testthat (>= 3.0.0),
     rmarkdown,
+    quarto,
     ggplot2,
     knitr,
     sensitivity,
