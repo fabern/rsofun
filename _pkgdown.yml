@@ -1,9 +1,16 @@
 url: https://fabern.github.io/rsofun/
 template:
+  package: tidytemplate
   bootstrap: 5
-  package: gecotemplate
+  bslib:
+    primary: "#096B72"
+    navbar-background: "#649d7a"
   params:
    mathjax: true
+  navbar:
+    bg: dark
+    structure:
+      right: [intro, reference, articles, tutorials, news, search, github, lightswitch]
 articles:
   - title: All vignettes
     contents:
