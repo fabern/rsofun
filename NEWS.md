@@ -1,4 +1,7 @@
-# rsofun (development version)
+# rsofun 0.0.0
+* This is a test-release on fabern/rsofun to test the simulatneous rendering of
+documentations for development and release versions (see 
+https://pkgdown.r-lib.org/reference/build_site.html#development-mode )
 
 # rsofun 5.1.0
 
