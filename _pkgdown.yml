@@ -1,6 +1,6 @@
 url: https://fabern.github.io/rsofun/
 template:
-  package: tidytemplate
+  package: gecotemplate
   bootstrap: 5
   bslib:
     primary: "#096B72"
