@@ -124,8 +124,7 @@ run_pmodel_onestep_f_bysite(
   makecheck = TRUE
 )
 #> # A tibble: 1 × 9
-#>       vcmax      jmax   vcmax25    jmax25 gs_accl   chi    iwue      rd
-#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>   <dbl>   <dbl>
-#> 1 0.0000177 0.0000400 0.0000275 0.0000518 0.00158 0.694 7.64e-5 3.11e-6
-#> # ℹ 1 more variable: bigdelta <dbl>
+#>       vcmax      jmax   vcmax25    jmax25 gs_accl   chi    iwue      rd bigdelta
+#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>   <dbl>   <dbl>    <dbl>
+#> 1 0.0000177 0.0000400 0.0000275 0.0000518 0.00158 0.694 7.64e-5 3.11e-6     19.4
 ```

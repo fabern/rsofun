@@ -47,12 +47,12 @@ measurements between 2001 and 2015 on each day of the year).
 ``` r
 p_model_drivers_vcmax25
 #> # A tibble: 4 × 4
-#>   sitename             params_siml       site_info        forcing 
-#>   <chr>                <list>            <list>           <list>  
-#> 1 Reichetal_Colorado   <tibble [1 × 11]> <tibble [1 × 6]> <tibble>
-#> 2 Reichetal_New_Mexico <tibble [1 × 11]> <tibble [1 × 6]> <tibble>
-#> 3 Reichetal_Venezuela  <tibble [1 × 11]> <tibble [1 × 6]> <tibble>
-#> 4 Reichetal_Wisconsin  <tibble [1 × 11]> <tibble [1 × 6]> <tibble>
+#>   sitename             params_siml       site_info        forcing            
+#>   <chr>                <list>            <list>           <list>             
+#> 1 Reichetal_Colorado   <tibble [1 × 11]> <tibble [1 × 6]> <tibble [365 × 13]>
+#> 2 Reichetal_New_Mexico <tibble [1 × 11]> <tibble [1 × 6]> <tibble [365 × 13]>
+#> 3 Reichetal_Venezuela  <tibble [1 × 11]> <tibble [1 × 6]> <tibble [365 × 13]>
+#> 4 Reichetal_Wisconsin  <tibble [1 × 11]> <tibble [1 × 6]> <tibble [365 × 13]>
 
 p_model_validation_vcmax25
 #> # A tibble: 4 × 2
@@ -157,8 +157,8 @@ ggplot(data = df_gpp_plot) +
     breaks = c("Observations",
                "P-model"),
     values = c("black", "tomato"))
-#> Warning: Removed 42 rows containing missing values or values outside the scale
-#> range (`geom_point()`).
+#> Warning: Removed 42 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
 ```
 
 ![](pmodel_use_files/figure-html/unnamed-chunk-4-1.png)
@@ -283,8 +283,8 @@ ggplot(data = df_gpp_plot) +
                "P-model (uncalibrated)",
                "P-model (calibrated)"),
     values = c("black", "grey", "tomato"))
-#> Warning: Removed 42 rows containing missing values or values outside the scale
-#> range (`geom_point()`).
+#> Warning: Removed 42 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
 ```
 
 ![](pmodel_use_files/figure-html/unnamed-chunk-7-1.png)
@@ -332,10 +332,9 @@ run_pmodel_onestep_f_bysite(
   makecheck = TRUE
 )
 #> # A tibble: 1 × 9
-#>       vcmax      jmax   vcmax25    jmax25 gs_accl   chi    iwue      rd
-#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>   <dbl>   <dbl>
-#> 1 0.0000177 0.0000400 0.0000275 0.0000518 0.00158 0.694 7.64e-5 3.11e-6
-#> # ℹ 1 more variable: bigdelta <dbl>
+#>       vcmax      jmax   vcmax25    jmax25 gs_accl   chi    iwue      rd bigdelta
+#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>   <dbl>   <dbl>    <dbl>
+#> 1 0.0000177 0.0000400 0.0000275 0.0000518 0.00158 0.694 7.64e-5 3.11e-6     19.4
 #
 #
 # make sure to check ?run_pmodel_onestep_f_bysite for units of output quantities.
@@ -384,7 +383,7 @@ tidyr::as_tibble(out_rpmodel) |>
                 rd   = rd*12            # mutliply by c_molmass (gC/mol)
   )
 #> # A tibble: 1 × 8
-#>       vcmax      jmax   vcmax25    jmax25      gs   chi    iwue      rd
-#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>   <dbl>   <dbl>
-#> 1 0.0000177 0.0000400 0.0000279 0.0000547 0.00160 0.694 7.64e-5 3.38e-6
+#>       vcmax      jmax   vcmax25    jmax25      gs   chi      iwue         rd
+#>       <dbl>     <dbl>     <dbl>     <dbl>   <dbl> <dbl>     <dbl>      <dbl>
+#> 1 0.0000177 0.0000400 0.0000279 0.0000547 0.00160 0.694 0.0000764 0.00000338
 ```

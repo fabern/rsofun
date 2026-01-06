@@ -385,20 +385,20 @@ summary(par_calib$mod)
 #>  Gelman Rubin multivariate psrf:  1.034 
 #>  
 #> ## Correlations 
-#>                  kphio kphio_par_a kphio_par_b soilm_thetastar
-#> kphio            1.000      -0.097       0.287           0.236
-#> kphio_par_a     -0.097       1.000      -0.201           0.116
-#> kphio_par_b      0.287      -0.201       1.000           0.301
-#> soilm_thetastar  0.236       0.116       0.301           1.000
-#> soilm_betao      0.236       0.000       0.189           0.128
-#> err_gpp          0.229      -0.002       0.098           0.042
-#>                 soilm_betao err_gpp
-#> kphio                 0.236   0.229
-#> kphio_par_a           0.000  -0.002
-#> kphio_par_b           0.189   0.098
-#> soilm_thetastar       0.128   0.042
-#> soilm_betao           1.000   0.147
-#> err_gpp               0.147   1.000
+#>                  kphio kphio_par_a kphio_par_b soilm_thetastar soilm_betao
+#> kphio            1.000      -0.097       0.287           0.236       0.236
+#> kphio_par_a     -0.097       1.000      -0.201           0.116       0.000
+#> kphio_par_b      0.287      -0.201       1.000           0.301       0.189
+#> soilm_thetastar  0.236       0.116       0.301           1.000       0.128
+#> soilm_betao      0.236       0.000       0.189           0.128       1.000
+#> err_gpp          0.229      -0.002       0.098           0.042       0.147
+#>                 err_gpp
+#> kphio             0.229
+#> kphio_par_a      -0.002
+#> kphio_par_b       0.098
+#> soilm_thetastar   0.042
+#> soilm_betao       0.147
+#> err_gpp           1.000
 ```
 
 More details on diagnosing MCMC convergence can be found in [this
@@ -564,8 +564,8 @@ plot_gpp_error <- ggplot(data = data_to_plot) +
                     values = c(add_alpha("tomato", 0.5),
                                "#1b9e77", 0))
 plot_gpp_error
-#> Warning: Removed 42 rows containing missing values or values outside the scale
-#> range (`geom_point()`).
+#> Warning: Removed 42 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
 ```
 
 ![](sensitivity_analysis_files/figure-html/unnamed-chunk-13-1.png)

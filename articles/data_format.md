@@ -28,17 +28,17 @@ rsofun::p_model_drivers
 # call to the included BiomeE (p-model) demo drivers
 rsofun::biomee_p_model_drivers
 #> # A tibble: 1 × 8
-#>   sitename site_info params_siml params_tile params_species init_cohort
-#>   <chr>    <list>    <list>      <list>      <list>         <list>     
-#> 1 CH-Lae   <tibble>  <tibble>    <tibble>    <tibble>       <tibble>   
+#>   sitename site_info         params_siml params_tile params_species init_cohort
+#>   <chr>    <list>            <list>      <list>      <list>         <list>     
+#> 1 CH-Lae   <tibble [1 × 10]> <tibble>    <tibble>    <tibble>       <tibble>   
 #> # ℹ 2 more variables: init_soil <list>, forcing <list>
 
 # call to the included BiomeE (gs leuning) demo drivers
 rsofun::biomee_gs_leuning_drivers
 #> # A tibble: 1 × 8
-#>   sitename site_info params_siml params_tile params_species init_cohort
-#>   <chr>    <list>    <list>      <list>      <list>         <list>     
-#> 1 CH-Lae   <tibble>  <tibble>    <tibble>    <tibble>       <tibble>   
+#>   sitename site_info         params_siml params_tile params_species init_cohort
+#>   <chr>    <list>            <list>      <list>      <list>         <list>     
+#> 1 CH-Lae   <tibble [1 × 10]> <tibble>    <tibble>    <tibble>       <tibble>   
 #> # ℹ 2 more variables: init_soil <list>, forcing <list>
 ```
 
@@ -85,20 +85,20 @@ Forcing data present in the demo drivers can be used as examples:
 # Detailed look at the forcing data for the P-model
 rsofun::p_model_drivers$forcing[[1]]
 #> # A tibble: 2,190 × 13
-#>    date        temp   vpd      ppfd netrad    patm  snow     rain  tmin
-#>    <date>     <dbl> <dbl>     <dbl>  <dbl>   <dbl> <dbl>    <dbl> <dbl>
-#>  1 2007-01-01 10.0  183.  0.000106    4.17  99944.     0  2.55e-5  7.12
-#>  2 2007-01-02  8.42 417.  0.000192  -22.2   99992.     0  6.94e-6  6.79
-#>  3 2007-01-03  9.13 566.  0.000187  -16.6  100075      0  0        4.21
-#>  4 2007-01-04 10.1  375.  0.0000828 -16.8   99338.     0  0        3.96
-#>  5 2007-01-05 10.7  508.  0.000183   -6.60  99419.     0  0        9.26
-#>  6 2007-01-06 13.6  656.  0.000188  -11.2   99467.     0  0        8.96
-#>  7 2007-01-07 13.7  567.  0.000155    7.32  99252.     0  0        9.55
-#>  8 2007-01-08 10.7  273.  0.0000717  -3.00  98871.     0  0        7.04
-#>  9 2007-01-09 16.4  682.  0.000188    9.94  99067.     0  0        9.46
-#> 10 2007-01-10 11.4   26.0 0.0000277  -6.41  99444.     0  0        8.98
+#>    date        temp   vpd    ppfd netrad    patm  snow    rain  tmin  tmax fapar
+#>    <date>     <dbl> <dbl>   <dbl>  <dbl>   <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>
+#>  1 2007-01-01 10.0  183.  1.06e-4   4.17  99944.     0 2.55e-5  7.12 13.0  0.605
+#>  2 2007-01-02  8.42 417.  1.92e-4 -22.2   99992.     0 6.94e-6  6.79  9.33 0.603
+#>  3 2007-01-03  9.13 566.  1.87e-4 -16.6  100075      0 0        4.21 11.2  0.600
+#>  4 2007-01-04 10.1  375.  8.28e-5 -16.8   99338.     0 0        3.96 12.2  0.598
+#>  5 2007-01-05 10.7  508.  1.83e-4  -6.60  99419.     0 0        9.26 11.4  0.596
+#>  6 2007-01-06 13.6  656.  1.88e-4 -11.2   99467.     0 0        8.96 15.4  0.596
+#>  7 2007-01-07 13.7  567.  1.55e-4   7.32  99252.     0 0        9.55 15.6  0.597
+#>  8 2007-01-08 10.7  273.  7.17e-5  -3.00  98871.     0 0        7.04 12.0  0.597
+#>  9 2007-01-09 16.4  682.  1.88e-4   9.94  99067.     0 0        9.46 19.0  0.598
+#> 10 2007-01-10 11.4   26.0 2.77e-5  -6.41  99444.     0 0        8.98 12.0  0.598
 #> # ℹ 2,180 more rows
-#> # ℹ 4 more variables: tmax <dbl>, fapar <dbl>, co2 <dbl>, ccov <dbl>
+#> # ℹ 2 more variables: co2 <dbl>, ccov <dbl>
 ```
 
 ## Output data

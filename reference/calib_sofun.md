@@ -126,5 +126,5 @@ settings <- list(
    targets = c("gpp")
  )
 #>  Running DEzs-MCMC, chain  1 iteration 51 of 51 . Current logp  -3669.919 -3238.148 -3965.871 . Please wait! 
-#> runMCMC terminated after 1.427seconds
+#> runMCMC terminated after 1.424seconds
 ```
